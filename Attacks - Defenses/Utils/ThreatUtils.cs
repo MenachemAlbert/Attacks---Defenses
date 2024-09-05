@@ -42,7 +42,7 @@ namespace Attacks___Defenses.Utils
                 Console.WriteLine("Attack severity is below the threshold. Attack is ignored!");
                 return;
             }
-            var defenseNode = bSTree.SeekingProtections(bSTree.Root, severity);
+            var defenseNode = BSTreeUtils.SeekingProtections(bSTree.Root, severity);
 
             if (defenseNode == null)
             {

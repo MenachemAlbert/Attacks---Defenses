@@ -109,5 +109,18 @@ namespace Attacks___Defenses.Utils
                     Console.WriteLine(new string('-', depth * 4) + node.ToString());
                 }
             }
+
+            public static DefenceStrategyNode SeekingProtections(DefenceStrategyNode node, int severity)
+            {
+                if (node == null) return default;
+            
+                if (node.NumInRange(severity)) return node;
+            
+                var leftResult = SeekingProtections(node.Left, severity);
+                if (leftResult != null)
+                    return leftResult;
+            
+                return SeekingProtections(node.Right, severity);
+            }
     }  
 }
