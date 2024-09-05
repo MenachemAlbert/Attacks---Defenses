@@ -35,14 +35,5 @@ namespace Attacks___Defenses
 
             return SeekingProtections(node.Right, severity);
         }
-
-        public void PrintTree()
-        {
-            var bstPrint = PreOrderTraversal();
-            foreach (var (node, depth) in bstPrint)
-            {
-                Console.WriteLine(new string('-', depth * 4) + node.ToString());
-            }
-        }
     }
 }

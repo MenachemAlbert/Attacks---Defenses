@@ -12,7 +12,7 @@ class Program
 
         defenceStrategyNodes.ForEach(defens => bSTree.Insert(defens));
 
-        bSTree.PrintTree();
+        BSTreeUtils.PrintTree(bSTree);
 
         List<Threat> threats = await JsonService.ReadFromJsonAsync<List<Threat>>("threats.json");
 

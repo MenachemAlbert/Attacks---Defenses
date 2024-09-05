@@ -100,5 +100,14 @@ namespace Attacks___Defenses.Utils
                 while (node.Left != null) node = node.Left;
                 return node;
             }
-        }  
+
+            public static void PrintTree(BSTree bSTree)
+            {
+                var bstPrint =bSTree.PreOrderTraversal();
+                foreach (var (node, depth) in bstPrint)
+                {
+                    Console.WriteLine(new string('-', depth * 4) + node.ToString());
+                }
+            }
+    }  
 }
